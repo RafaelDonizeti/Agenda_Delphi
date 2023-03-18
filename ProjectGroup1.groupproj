@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{E86A997E-D442-4491-80AE-26DA731260BC}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Nova.Agenda.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\..\..\..\..\Public\Documents\Embarcadero\Studio\21.0\CatalogRepository\FortesReport-4.1\Packages\frce.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Nova_Agenda">
+        <MSBuild Projects="Nova.Agenda.dproj"/>
+    </Target>
+    <Target Name="Nova_Agenda:Clean">
+        <MSBuild Projects="Nova.Agenda.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Nova_Agenda:Make">
+        <MSBuild Projects="Nova.Agenda.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="frce">
+        <MSBuild Projects="..\..\..\..\..\Public\Documents\Embarcadero\Studio\21.0\CatalogRepository\FortesReport-4.1\Packages\frce.dproj"/>
+    </Target>
+    <Target Name="frce:Clean">
+        <MSBuild Projects="..\..\..\..\..\Public\Documents\Embarcadero\Studio\21.0\CatalogRepository\FortesReport-4.1\Packages\frce.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="frce:Make">
+        <MSBuild Projects="..\..\..\..\..\Public\Documents\Embarcadero\Studio\21.0\CatalogRepository\FortesReport-4.1\Packages\frce.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Nova_Agenda;frce"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Nova_Agenda:Clean;frce:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Nova_Agenda:Make;frce:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
