@@ -35,8 +35,6 @@ object Form1: TForm1
         Text = 'Sistema de Agenda'
         Width = 50
       end>
-    ExplicitTop = 464
-    ExplicitWidth = 735
   end
   object Timer1: TTimer
     OnTimer = Timer1Timer
@@ -60,6 +58,7 @@ object Form1: TForm1
     end
     object Excluses1: TMenuItem
       Caption = 'Exclus'#245'es'
+      OnClick = Excluses1Click
     end
     object Sair1: TMenuItem
       Caption = 'Sair'

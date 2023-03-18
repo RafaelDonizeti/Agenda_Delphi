@@ -8,7 +8,7 @@ uses
   uBusca2 in 'uBusca2.pas' {fBuscaNome2},
   uConsulta in 'uConsulta.pas' {fConsulta},
   uRelConsulta in 'uRelConsulta.pas' {fRelConsulta},
-  uExclusao in 'uExclusao.pas' {Form2};
+  uExclusao in 'uExclusao.pas' {fExclusao};
 
 {$R *.res}
 
@@ -21,6 +21,6 @@ begin
   Application.CreateForm(TfBuscaNome2, fBuscaNome2);
   Application.CreateForm(TfConsulta, fConsulta);
   Application.CreateForm(TfRelConsulta, fRelConsulta);
-  Application.CreateForm(TForm2, Form2);
+  Application.CreateForm(TfExclusao, fExclusao);
   Application.Run;
 end.

@@ -21,6 +21,7 @@ type
     procedure Cadastro1Click(Sender: TObject);
     procedure Alterao1Click(Sender: TObject);
     procedure ConsultasRelatrios1Click(Sender: TObject);
+    procedure Excluses1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -34,7 +35,7 @@ implementation
 
 {$R *.dfm}
 
-uses uCadastros, uAltCadastro, uConsulta;
+uses uCadastros, uAltCadastro, uConsulta, uExclusao;
 
 procedure TForm1.Alterao1Click(Sender: TObject);
 begin
@@ -52,6 +53,12 @@ procedure TForm1.ConsultasRelatrios1Click(Sender: TObject);
 begin
 Application.CreateForm(TfConsulta,fConsulta);
 fConsulta.showmodal;
+end;
+
+procedure TForm1.Excluses1Click(Sender: TObject);
+begin
+Application.CreateForm(TfExclusao,fExclusao);
+fExclusao.showmodal;
 end;
 
 procedure TForm1.FormActivate(Sender: TObject);

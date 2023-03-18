@@ -125,7 +125,7 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="uExclusao.pas">
-            <Form>Form2</Form>
+            <Form>fExclusao</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">

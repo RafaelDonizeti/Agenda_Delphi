@@ -1,4 +1,4 @@
-object Form2: TForm2
+object fExclusao: TfExclusao
   Left = 0
   Top = 0
   Caption = 'Exclus'#227'o de Dados'
@@ -11,6 +11,7 @@ object Form2: TForm2
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  Position = poDesktopCenter
   PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
@@ -20,9 +21,6 @@ object Form2: TForm2
     Height = 73
     Align = alTop
     TabOrder = 0
-    ExplicitLeft = 8
-    ExplicitTop = 8
-    ExplicitWidth = 641
     object Label1: TLabel
       Left = 8
       Top = 16
@@ -42,8 +40,10 @@ object Form2: TForm2
       Top = 11
       Width = 49
       Height = 25
+      Align = alCustom
       Caption = '...'
       TabOrder = 1
+      OnClick = BitBtn1Click
     end
     object btnExcluir: TBitBtn
       Left = 160
@@ -52,6 +52,7 @@ object Form2: TForm2
       Height = 25
       Caption = 'Excluir Registro'
       TabOrder = 2
+      OnClick = btnExcluirClick
     end
     object btnLimpar: TBitBtn
       Left = 296
@@ -60,6 +61,7 @@ object Form2: TForm2
       Height = 25
       Caption = 'Limpar'
       TabOrder = 3
+      OnClick = btnLimparClick
     end
     object btnSair: TBitBtn
       Left = 535
@@ -68,6 +70,7 @@ object Form2: TForm2
       Height = 46
       Caption = 'Sair'
       TabOrder = 4
+      OnClick = btnSairClick
     end
   end
   object Panel2: TPanel
@@ -83,8 +86,6 @@ object Form2: TForm2
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 1
-    ExplicitLeft = 8
-    ExplicitTop = 79
     object Label2: TLabel
       Left = 52
       Top = 99
