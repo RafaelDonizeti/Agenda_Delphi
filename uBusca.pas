@@ -64,7 +64,9 @@ procedure TfBuscaNome.Edit1Change(Sender: TObject);
    end;
 procedure TfBuscaNome.FormActivate(Sender: TObject);
 begin
-dmNovaAgenda.qBuscaNome.Open();
+  dmNovaAgenda.qBuscaNome.open();
+  dmNovaAgenda.qBuscaNome.Close;
+  dmNovaAgenda.qBuscaNome.open();
 end;
 
 end.

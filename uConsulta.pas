@@ -107,7 +107,9 @@ end;
 
 procedure TfConsulta.FormActivate(Sender: TObject);
 begin
+dmNovaAgenda.qConsEsc.close();
 dmNovaAgenda.qConsEsc.Open();
+
 
 end;
 

@@ -70,7 +70,7 @@ implementation
 
 {$R *.dfm}
 
-uses dm_novaagenda, uPrincipal, uBusca;
+uses dm_novaagenda, uPrincipal, uBusca, uBusca2;
 
 procedure TfAltCadastro.btnCancelarClick(Sender: TObject);
 begin
@@ -180,7 +180,7 @@ end;
 
 procedure TfAltCadastro.SpeedButton1Click(Sender: TObject);
 begin
-fBuscaNome.showmodal;
+fBuscaNome2.showmodal;
 end;
 
 end.
